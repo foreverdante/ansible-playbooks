@@ -1,0 +1,40 @@
+---
+  - hosts: all
+    gather_facts: true
+
+    vars:
+      ZabbixCore: 'zabbix.tamko.com'
+      ZabbixDev: 'zabbix-dev.tamko.com'
+      ZabbixPort: '10051'
+      Proxy: '10.142.2.210'
+
+    tasks:
+      - name: Create directory
+        include_tasks: tasks/create_dir.yml
+
+      - name: Install software
+        include_tasks: tasks/install_software.yml
+
+      - name: Edit zabbix_agentd.conf
+        include_tasks: tasks/zabbixagentconf.yml
+
+      - name: Remove installation directory
+        win_file:
+          path: C:\install
+          state: absent
+
+      - name: Set zabbix_agent to start automatically on boot
+        win_service:
+          name: Zabbix Agent
+          start_mode: auto
+          state: started
+
+      - name: Stop Zabbix Agent Service
+        win_service:
+          name: Zabbix Agent
+          state: stopped
+
+      - name: Start Zabbix Agent Service
+        win_service:
+          name: Zabbix Agent
+          state: started

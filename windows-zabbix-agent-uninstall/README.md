@@ -1,0 +1,1 @@
+# windows-zabbix-agent-uninstall

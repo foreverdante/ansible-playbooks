@@ -1,0 +1,9 @@
+---
+  - name: Create "install" directory in /tmp
+    file:
+      path: /tmp/install
+      owner: administrator
+      group: administrator
+      mode: '0644'
+      state: directory
+...

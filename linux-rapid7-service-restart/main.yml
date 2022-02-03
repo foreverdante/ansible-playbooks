@@ -1,0 +1,11 @@
+---
+  - name: Restart Rapid7 service
+    hosts: all
+    gather_facts: yes
+
+    tasks:
+      - name: Restart Rapid7 service
+        systemd:
+          name: collector
+          state: reloaded
+        when: ansible_distribution == "CentOS"

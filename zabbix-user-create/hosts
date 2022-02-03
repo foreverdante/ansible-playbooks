@@ -1,0 +1,6 @@
+[all]
+127.0.0.1
+
+[all:vars]
+ansible_username=root
+ansible_password=19tamko44!

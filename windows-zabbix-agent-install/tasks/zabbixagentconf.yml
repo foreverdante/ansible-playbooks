@@ -1,0 +1,44 @@
+---
+    - name: Configure Server
+      win_lineinfile:
+        path: C:\Program Files\Zabbix Agent\zabbix_agentd.conf
+        regex: '^Server=.*$'
+        line: "Server={{ ZabbixCore }},{{ ZabbixDev }},{{ Proxy }}"
+
+    - name: Configure ServerActive
+      win_lineinfile:
+        path: C:\Program Files\Zabbix Agent\zabbix_agentd.conf
+        regex: '^# ServerActive=.*$'
+        line: 'ServerActive={{ ZabbixCore }},{{ ZabbixDev }},{{ Proxy }}'
+
+    - name: Uncomment RefreshActiveChecks
+      win_lineinfile:
+        path: C:\Program Files\Zabbix Agent\zabbix_agentd.conf
+        regex: '^# RefreshActiveChecks=.*$'
+        line: 'RefreshActiveChecks=120'
+
+    - name: Configure AllowKey
+      win_lineinfile:
+        path: C:\Program Files\Zabbix Agent\zabbix_agentd.conf
+        regex: '^### Option: DenyKey'
+        insertbefore: '### Option: DenyKey'
+        line: 'AllowKey=system.run[*]'
+
+    - name: Change Hostname variable
+      win_lineinfile:
+        path: C:\Program Files\Zabbix Agent\zabbix_agentd.conf
+        regex: '^Hostname=.*$'
+        line: "Hostname={{ ansible_hostname }}.tamko.com"
+
+    - name: Configure HostMetadata
+      win_lineinfile:
+        path: C:\Program Files\Zabbix Agent\zabbix_agentd.conf
+        regex: '^# HostMetadata='
+        line: 'HostMetadata=Win-PSL'
+
+    - name: Configure Script Timout
+      win_lineinfile:
+        path: C:\Program Files\Zabbix Agent\zabbix_agentd.conf
+        regex: '^# Timeout=.*$'
+        line: 'Timeout=10'
+...

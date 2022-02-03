@@ -1,0 +1,15 @@
+---
+  - name: Download Zabbix Agent on {{ ansible_netbios_name }}
+    win_get_url:
+      url:  https://cdn.zabbix.com/zabbix/binaries/stable/5.4/5.4.5/zabbix_agent-5.4.5-windows-amd64-openssl.msi
+      dest: C:\install
+
+  - name: Install Zabbix Agent on {{ ansible_netbios_name }}
+    win_package:
+      path: 'C:\install\zabbix_agent-5.4.5-windows-amd64-openssl.msi'
+      arguments:
+      - ACCEPT=YES
+      - SERVER={{ ZabbixCore }},{{ Proxy }}
+      - HOSTNAME={{ ansible_netbios_name }}.takmo.com
+      state: present
+...

@@ -1,0 +1,10 @@
+---
+  - name: Download Zabbix Agent on {{ ansible_netbios_name }}
+    apt:
+      deb:  https://repo.zabbix.com/zabbix/4.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_4.0-2+bionic_all.deb
+
+  - name: Install Zabbix Agent
+    apt:
+      name: zabbix-agent
+      state: latest
+...

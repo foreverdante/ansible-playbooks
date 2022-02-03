@@ -1,0 +1,165 @@
+[root@PA00ANSL01 zabbix-user-create]# ldapsearch -x -w ZabbixCoreAdmin -b "DC=tamko,DC=com" -D 'ZABBIX.SVC' -h tamko.com "cn=jmedloc"
+# extended LDIF
+#
+# LDAPv3
+# base <DC=tamko,DC=com> with scope subtree
+# filter: cn=jmedloc
+# requesting: ALL
+#
+
+# JMEDLOC, Cypress Waters, End_Users, tamko.com
+dn: CN=JMEDLOC,OU=Cypress Waters,OU=End_Users,DC=tamko,DC=com
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: JMEDLOC
+sn: Medlock
+l: Dallas
+st: TX
+title: Automation Engineer
+description: Automation Engineer
+postalCode: 75019
+physicalDeliveryOfficeName: Cypress Waters
+telephoneNumber: (800) 641-4691 X6580
+givenName: Johnny
+distinguishedName: CN=JMEDLOC,OU=Cypress Waters,OU=End_Users,DC=tamko,DC=com
+instanceType: 4
+whenCreated: 20191008203501.0Z
+whenChanged: 20210202142603.0Z
+displayName: Johnny Medlock
+uSNCreated: 93075
+memberOf: CN=GRP_AnsibleUsers,OU=Groups,DC=tamko,DC=com
+memberOf: CN=GRP_ANSIBLE_TEAM_ARCH,OU=Groups,DC=tamko,DC=com
+memberOf: CN=DL_IT_ARC,OU=Distribution Lists,DC=tamko,DC=com
+memberOf: CN=GRP_Exclaimer_Signatures_Default,OU=Organization,OU=Groups,DC=tam
+ ko,DC=com
+memberOf: CN=GRP_Exclaimer_RemoveExistingSignatures,OU=Organization,OU=Groups,
+ DC=tamko,DC=com
+memberOf: CN=GRP_O365_MessageCenter_RBAC_Reader,OU=Organization,OU=Groups,DC=t
+ amko,DC=com
+memberOf: CN=GRP_WEW_IS_Dept,OU=Groups,DC=tamko,DC=com
+memberOf: CN=GRP_Azure_ADSyncOperators,OU=Organization,OU=Groups,DC=tamko,DC=c
+ om
+memberOf: CN=DL_PCSEmail,OU=Distribution Lists,DC=tamko,DC=com
+memberOf: CN=GRP_IT_OOO_Mailbox_Owners,OU=Groups,DC=tamko,DC=com
+memberOf: CN=GRP_IT_OOO_Calendar_Authors,OU=Groups,DC=tamko,DC=com
+memberOf: CN=GRP_SCCM_DeploymentOperators,OU=Groups,DC=tamko,DC=com
+memberOf: CN=DL_IT_Employees,OU=Distribution Lists,DC=tamko,DC=com
+memberOf: CN=GRP_SCCM_DeleteDevices,OU=Groups,DC=tamko,DC=com
+memberOf: CN=DGG_PwdPlcy-PrivilegedAccounts,OU=Groups,DC=tamko,DC=com
+memberOf: CN=DL_O365_Migration,OU=Distribution Lists,DC=tamko,DC=com
+memberOf: CN=GRP_O365_E3LicenseAssignment,OU=Organization,OU=Groups,DC=tamko,D
+ C=com
+memberOf: CN=GRP_InTune_DeviceCompliance_Android,OU=Organization,OU=Groups,DC=
+ tamko,DC=com
+memberOf: CN=GRP_InTune_DeviceCompliance_iOS,OU=Organization,OU=Groups,DC=tamk
+ o,DC=com
+memberOf: CN=GRP_MobileApps_Android_AppPolicy,OU=Organization,OU=Groups,DC=tam
+ ko,DC=com
+memberOf: CN=GRP_MobileApps_iOS_AppPolicy,OU=Organization,OU=Groups,DC=tamko,D
+ C=com
+memberOf: CN=GRP_InTune_LicenseAssignment,OU=Organization,OU=Groups,DC=tamko,D
+ C=com
+memberOf: CN=GRP_TAMKO_Users,OU=Groups,DC=tamko,DC=com
+memberOf: CN=GP_USERS_COOLTOAST,OU=Groups,DC=tamko,DC=com
+memberOf: CN=GRP_IS_IRVING,OU=Groups,DC=tamko,DC=com
+memberOf: CN=GRP_CELL_SYSTEM_ADMINS,OU=Groups,DC=tamko,DC=com
+memberOf: CN=GRP_AMS_ADMIN,OU=Groups,DC=tamko,DC=com
+memberOf: CN=GRP_CELL_SYSTEM,OU=Groups,DC=tamko,DC=com
+memberOf: CN=GRP_CBI_ADMIN,OU=Groups,DC=tamko,DC=com
+memberOf: CN=Grp_TurboMeeting_Users,OU=Groups,DC=tamko,DC=com
+memberOf: CN=GRP_IS,OU=Groups,DC=tamko,DC=com
+memberOf: CN=GRP_TRACKIT_TECHNICIANS,OU=Groups,DC=tamko,DC=com
+memberOf: CN=DL_PENDINGEMAIL,OU=Distribution Lists,DC=tamko,DC=com
+memberOf: CN=GRP_NWS,OU=Groups,DC=tamko,DC=com
+memberOf: CN=SCCM Admins,CN=Users,DC=tamko,DC=com
+memberOf: CN=DL_IS_Cypress_Waters,OU=Distribution Lists,DC=tamko,DC=com
+memberOf: CN=GRP_ISYS_USERS,OU=Groups,DC=tamko,DC=com
+memberOf: CN=DL_All_Corporate,OU=Distribution Lists,DC=tamko,DC=com
+uSNChanged: 100815035
+department: IT Architecture
+company: TAMKO Corporate
+proxyAddresses: smtp:Johnny.Medlock@tamko.com
+proxyAddresses: X500:/o=ExchangeLabs/ou=Exchange Administrative Group (FYDIBOH
+ F23SPDLT)/cn=Recipients/cn=595ed44a6ed14fb5bdbfcd58c0eea650-JMEDLOC
+proxyAddresses: SMTP:Johnny_Medlock@tamko.com
+proxyAddresses: X400:C=us;A= ;P=tamko;O=Exchange;S=Medlock;G=Johnny;
+proxyAddresses: smtp:JMEDLOC@tamko.mail.onmicrosoft.com
+streetAddress: 3100 Olympus Boulevard Suite 300
+garbageCollPeriod: 1209600
+targetAddress: SMTP:JMEDLOC@tamko.mail.onmicrosoft.com
+mailNickname: JMEDLOC
+protocolSettings:: UmVtb3RlUG93ZXJTaGVsbMKnMQ==
+internetEncoding: 1310720
+name: JMEDLOC
+objectGUID:: dDZpCdG+MU2RT0DNaeTk5Q==
+userAccountControl: 512
+badPwdCount: 0
+codePage: 0
+countryCode: 0
+employeeID: 08287
+badPasswordTime: 132532121665908450
+lastLogon: 132566962786786002
+scriptPath: JMEDLOC.BAT
+pwdLastSet: 132566627877901666
+primaryGroupID: 513
+objectSid:: AQUAAAAAAAUVAAAA6B2Ofgk4LgfbVtk4AlIBAA==
+accountExpires: 9223372036854775807
+logonCount: 64
+sAMAccountName: JMEDLOC
+division: TAMKO Building Products LLC
+sAMAccountType: 805306368
+showInAddressBook: CN=Default Global Address List,CN=All Global Address Lists,
+ CN=Address Lists Container,CN=tamko,CN=Microsoft Exchange,CN=Services,CN=Conf
+ iguration,DC=tamko,DC=com
+managedObjects: CN=W3JHLGH2,OU=Cypress Waters,OU=End User Computers,DC=tamko,D
+ C=com
+managedObjects: CN=W3JHLGH2-1,OU=Cypress Waters,OU=End User Computers,DC=tamko
+ ,DC=com
+legacyExchangeDN: /o=tamko/ou=External (FYDIBOHF25SPDLT)/cn=Recipients/cn=cda6
+ 6a6328f0453cabd9e021f7754fa2-Johnny Medlock
+userPrincipalName: JMEDLOC@tamko.com
+lockoutTime: 0
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=tamko,DC=com
+dSCorePropagationData: 20210129193950.0Z
+dSCorePropagationData: 20210129184311.0Z
+dSCorePropagationData: 20210129153950.0Z
+dSCorePropagationData: 20210129152546.0Z
+dSCorePropagationData: 16010101000000.0Z
+mS-DS-ConsistencyGuid:: dDZpCdG+MU2RT0DNaeTk5Q==
+lastLogonTimestamp: 132560890433244600
+msDS-ExternalDirectoryObjectId: User_c1b87817-e89e-4f66-a8bc-eb98e5fdd284
+textEncodedORAddress: X400:C=us;A= ;P=tamko;O=Exchange;S=Medlock;G=Johnny;
+mail: Johnny_Medlock@tamko.com
+manager: CN=JDAVIS3,OU=Admin,OU=End_Users,DC=tamko,DC=com
+msExchPoliciesIncluded: 7aa3db49-b644-47a9-9d6a-55d4e0e013df
+msExchPoliciesIncluded: {26491cfc-9e50-4857-861b-0cb8df22b5d7}
+msExchUserAccountControl: 0
+msExchMailboxFolderSet: 0
+msExchDumpsterQuota: 31457280
+msExchUMDtmfMap: reversedPhone:1964146008
+msExchUMDtmfMap: emailAddress:5646696335625
+msExchUMDtmfMap: lastNameFirstName:6335625564669
+msExchUMDtmfMap: firstNameLastName:5646696335625
+msExchGroupSecurityFlags: 0
+msExchModerationFlags: 6
+msExchMDBRulesQuota: 256
+msExchBlockedSendersHash:: EWOCYA==
+msExchDumpsterWarningQuota: 20971520
+msExchProvisioningFlags: 0
+msExchRemoteRecipientType: 1
+msExchArchiveQuota: 104857600
+msExchSafeSendersHash:: m2VnCJJ+PySYTQpUiXBAl+rdgLwm/3PI
+msExchArchiveWarnQuota: 94371840
+msExchMailboxAuditEnable: FALSE
+msExchVersion: 44220983382016
+msExchAddressBookFlags: 1
+msExchRecipientDisplayType: -2147483642
+msExchCalendarLoggingQuota: 6291456
+msExchUMEnabledFlags2: -1
+msExchBypassAudit: FALSE
+msExchRecipientSoftDeletedStatus: 0
+msExchMailboxAuditLogAgeLimit: 7776000
+msExchRecipientTypeDetails: 2147483648
+msExchTransportRecipientSettingsFlags: 0

@@ -1,0 +1,36 @@
+---
+  - hosts: all
+
+    tasks:
+      - name: Create a new Zabbix user
+        community.zabbix.zabbix_user:
+          server_url: "https://zabbix-dev.tamko.com"
+          login_user: "jmedloc-a"
+          login_password: "N0tG3tt!ng0n"
+          alias: "TestUser"
+          name: "{{ firstName }}"
+          surname: "{{ lastName }}"
+          usrgrps:
+            - Users
+          passwd: "asdf;lkj"
+          lang: en_US
+          theme: blue-theme
+          autologin: '0'
+          autologout: '0'
+          refresh: '30'
+          rows_per_page: '50'
+          after_login_url: ''
+          user_medias:
+            - mediatype: Email
+              sendto: "{{ username }}@tamko.com"
+              period: 1-7,00:00-24:00
+              severity:
+                not_classified: no
+                information: yes
+                warning: yes
+                average: yes
+                high: yes
+                disaster: yes
+              active: no
+          type: Zabbix user
+          state: present

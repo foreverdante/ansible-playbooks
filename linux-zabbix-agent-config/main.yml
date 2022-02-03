@@ -1,0 +1,33 @@
+---
+  - hosts: all
+    gather_facts: true
+    become: yes
+    become_user: root
+
+    vars:
+      ZabbixCore: 'zabbix.tamko.com'
+      ZabbixPort: '10051'
+      Proxy: 'jln-zbxp.tamko.com'
+      ProxyDev: 'jln-zbxp-dev.tamko.com'
+
+
+    tasks:
+    - name: Create directory
+      include_tasks: tasks/create_dir.yml
+
+    - name: Install software
+      include_tasks: tasks/install_software.yml
+
+    - name: Edit zabbix_agentd.conf
+      include_tasks: tasks/zabbixagentconf.yml
+
+    - name: Remove installation directory
+      file:
+        path: /tmp/install
+        state: absent
+
+    - name: Set zabbix_agent to start automatically on boot
+      systemd:
+        name: Zabbix Agent
+        enabled: yes
+        state: started

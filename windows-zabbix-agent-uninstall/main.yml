@@ -1,0 +1,15 @@
+---
+  - hosts: all
+    gather_facts: true
+
+    tasks:
+    - name: Create directory
+      include_tasks: tasks/create_dir.yml
+
+    - name: Uninstall software
+      include_tasks: tasks/uninstall_software.yml
+
+    - name: Remove installation directory
+      win_file:
+        path: C:\install
+        state: absent

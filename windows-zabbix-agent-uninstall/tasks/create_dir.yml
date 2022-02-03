@@ -1,0 +1,6 @@
+---
+  - name: Create "install" directory in C:\
+    win_file:
+      path: C:\install
+      state: directory
+...

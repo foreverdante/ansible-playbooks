@@ -1,0 +1,10 @@
+[all]
+10.110.5.102
+10.210.17.250
+
+[all:vars]
+ansible_user=jmedloc-a
+ansible_password='N0tG3tt!ng0n'
+ansible_connection=winrm
+ansible_winrm_transport=ntlm
+ansible_port=5985
